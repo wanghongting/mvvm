@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" v-model="inpVal" aaa="aaa" style='width:300px'>
+        <div>{{inpVal}}</div>
+        {{brotherMsg.content}}
+    </div>
+    <script src='./mvvm.js'></script>
+    <script>
+        
+        new Mvvm({
+            el: 'box',
+            data: {
+                inpVal: `现在是北京时间${new Date().toLocaleTimeString()}`,
+                brotherMsg: {
+                    content: '嗯知道了'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
